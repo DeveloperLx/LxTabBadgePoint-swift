@@ -79,7 +79,7 @@ extension UIViewController {
     
         var _isEmbedInTabBarController = false
         
-        if let tbc = tabBarController, vcs = tbc.viewControllers {
+        if let tbc = self.tabBarController, vcs = tbc.viewControllers {
             
             for i in 0 ..< vcs.count {
                 
@@ -110,7 +110,7 @@ extension UIViewController {
             return obj.integerValue
         }
         set {
-            objc_setAssociatedObject(self, &AssociatedKeys.tabIndexAssociatedKey, self.tabIndex, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKeys.tabIndexAssociatedKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
@@ -135,7 +135,7 @@ extension UIViewController {
 
                 tabBarButtonArray.sortInPlace({ (subView1, subView2) -> Bool in
                     
-                    return subView1.frame.minX > subView2.frame.minX
+                    return subView1.frame.minX < subView2.frame.minX
                 })
                 
                 if tabIndex >= 0 && tabIndex < tabBarButtonArray.count {

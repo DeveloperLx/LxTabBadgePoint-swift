@@ -29,8 +29,8 @@ class ViewController: UIViewController {
         
         let handleTabPointButtonCenterXConstraint = NSLayoutConstraint(item: handleTabPointButton, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0)
         let handleTabPointButtonCenterYConstraint = NSLayoutConstraint(item: handleTabPointButton, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0)
-        let handleTabPointButtonWidthConstraint = NSLayoutConstraint(item: handleTabPointButton, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1, constant: 120)
-        let handleTabPointButtonHeightConstraint = NSLayoutConstraint(item: handleTabPointButton, attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height, multiplier: 1, constant: 60)
+        let handleTabPointButtonWidthConstraint = NSLayoutConstraint(item: handleTabPointButton, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1, constant: 120)
+        let handleTabPointButtonHeightConstraint = NSLayoutConstraint(item: handleTabPointButton, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1, constant: 60)
         
         view.addConstraints([handleTabPointButtonCenterXConstraint,
             handleTabPointButtonCenterYConstraint,
