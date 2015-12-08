@@ -19,8 +19,8 @@ class ViewController: UIViewController {
         handleTabPointButton.showsTouchWhenHighlighted = true
         handleTabPointButton.titleLabel?.font = UIFont.systemFontOfSize(20)
         handleTabPointButton.backgroundColor = UIColor.whiteColor()
-        handleTabPointButton.setTitle("显示红点", forState: .Normal)
-        handleTabPointButton.setTitle("隐藏红点", forState: .Selected)
+        handleTabPointButton.setTitle("show badge view", forState: .Normal)
+        handleTabPointButton.setTitle("hide badge view", forState: .Selected)
         handleTabPointButton.setTitleColor(view.backgroundColor, forState: .Normal)
         handleTabPointButton.addTarget(self, action: Selector("handleTabPointButtonClicked:"), forControlEvents: .TouchUpInside)
         view.addSubview(handleTabPointButton)
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         
         let handleTabPointButtonCenterXConstraint = NSLayoutConstraint(item: handleTabPointButton, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0)
         let handleTabPointButtonCenterYConstraint = NSLayoutConstraint(item: handleTabPointButton, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0)
-        let handleTabPointButtonWidthConstraint = NSLayoutConstraint(item: handleTabPointButton, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1, constant: 120)
+        let handleTabPointButtonWidthConstraint = NSLayoutConstraint(item: handleTabPointButton, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1, constant: 180)
         let handleTabPointButtonHeightConstraint = NSLayoutConstraint(item: handleTabPointButton, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1, constant: 60)
         
         view.addConstraints([handleTabPointButtonCenterXConstraint,
